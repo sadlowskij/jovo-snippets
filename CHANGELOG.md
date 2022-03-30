@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.2] - 2022-03-30
+### Fixed
+- Fixed `jc` snippet by adding missing curly bracket
+
 ## [0.0.1] - 2022-03-30
 ### Added
 - Added Basic Jovo Component Snippet `jc`
