@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.3] - 2022-03-30
+### Fixed
+- Fixed `jc` snippet by using tabs instead of spaces, exporting class and added blank lines according to default prettier rules
 ## [0.0.2] - 2022-03-30
 ### Fixed
 - Fixed `jc` snippet by adding missing curly bracket
