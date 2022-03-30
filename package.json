@@ -3,6 +3,10 @@
     "displayName": "Jovo Snippets",
     "description": "Handy snippets for Jovo v4",
     "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sadlowskij/jovo-snippets.git"
+    },
     "engines": {
         "vscode": "^1.56.0"
     },
