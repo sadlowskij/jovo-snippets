@@ -1,0 +1,36 @@
+{
+  "jovoComponent": {
+    "prefix": ["jc"],
+    "body": [
+      "import { Component, BaseComponent } from '@jovotech/framework';",
+      "",
+      "@Component({$2})",
+      "export class ${1:${TM_FILENAME_BASE}} extends BaseComponent {",
+      "\tSTART() {",
+      "\t\t$0",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "Creates a simple Jovo Component"
+  },
+  "jovoOutput": {
+    "prefix": ["jo"],
+    "body": [
+      "import { Output, BaseOutput, OutputTemplate } from '@jovotech/framework';",
+      "",
+      "@Output()",
+      "export class ${1:${TM_FILENAME_BASE}} extends BaseOutput {",
+      "\tbuild(): OutputTemplate | OutputTemplate[] {",
+      "\t\t$2",
+      "\t}",
+      "}"
+    ],
+    "description": "Creates a simple Jovo Output Class"
+  },
+  "jovoHandler": {
+    "prefix": ["jh"],
+    "body": ["@Handle({$2})", "$1() {", "\t$0", "}"],
+    "description": "Creates a simple Jovo Handler"
+  },
+}

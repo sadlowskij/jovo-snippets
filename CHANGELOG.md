@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.6] - 2022-04-03
+### Fixed
+- Moved JSON Snippets into own snippets file
+
 ## [0.0.5] - 2022-04-03
 ### Added
 - Jovo Output Snippet

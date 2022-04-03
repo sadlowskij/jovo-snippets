@@ -2,7 +2,7 @@
     "name": "jovo-snippets",
     "displayName": "Jovo Snippets",
     "description": "Handy snippets for Jovo v4",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "publisher": "jsadlowski",
     "repository": {
         "type": "git",
@@ -18,7 +18,11 @@
         "snippets": [
             {
                 "language": "typescript",
-                "path": "./snippets/snippets.code-snippets"
+                "path": "./snippets/typescript.code-snippets"
+            },
+            {
+                "language": "json",
+                "path": "./snippets/json.code-snippets"
             }
         ]
     }
