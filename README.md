@@ -4,5 +4,12 @@ This snippet library is supposed to boost development speed vor Jovo v4 projects
 
 ## Snippets
 |  Trigger | Content                                                          |
-| -------: | ---------------------------------------------------------------- |
-|   `jc→`  | jovo component                                                   |
+| -------: | ----------------------|
+| `jc→`    | jovo component         |
+| `jo→`    | jovo output            |
+| `jh→`    | jovo handler           |
+| `jlm→`   | jovo language model    |
+| `ji→`    | jovo intent            |
+| `je→`    | jovo entity            |
+| `jet→`   | jovo entity type       |
+| `jetv→`  | jovo entity type value |

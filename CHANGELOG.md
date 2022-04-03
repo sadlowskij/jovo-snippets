@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.5] - 2022-04-03
+### Added
+- Jovo Output Snippet
+- Jovo Handler Snippet
+- Jovo Language Model Snippet
+- Jovo Intent Snippet
+- Jovo Entity Snippet
+- Jovo Entity Type Snippet
+- Jovo Entity Type value Snippet
+
 ## [0.0.4] - 2022-03-30
 ### Fixed
 - A minor CHANGELOG fix

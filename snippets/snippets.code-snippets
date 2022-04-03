@@ -1,5 +1,5 @@
 {
-  "jovoComponent":{
+  "jovoComponent": {
     "prefix": ["jc"],
     "body": [
       "import { Component, BaseComponent } from '@jovotech/framework';",
@@ -13,5 +13,76 @@
       ""
     ],
     "description": "Creates a simple Jovo Component"
+  },
+  "jovoOutput": {
+    "prefix": ["jo"],
+    "body": [
+      "import { Output, BaseOutput, OutputTemplate } from '@jovotech/framework';",
+      "",
+      "@Output()",
+      "export class ${1:${TM_FILENAME_BASE}} extends BaseOutput {",
+      "\tbuild(): OutputTemplate | OutputTemplate[] {",
+      "\t\t$2",
+      "\t}",
+      "}"
+    ],
+    "description": "Creates a simple Jovo Output Class"
+  },
+  "jovoHandler": {
+    "prefix": ["jh"],
+    "body": ["@Handle({$2})", "$1() {", "\t$0", "}"],
+    "description": "Creates a simple Jovo Handler"
+  },
+  "jovoLanguageModel": {
+    "prefix": ["jlm"],
+    "body": [
+      "{",
+      "\t\"version\": \"4.0\",",
+      "\t\"invocation\": \"$1\",",
+      "\t\"intents\": {",
+      "\t\t$2",
+      "\t},",
+      "\t\"entityTypes\": {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "Creates simple Jovo Language Model"
+  },
+  "jovoIntent": {
+    "prefix": ["ji"],
+    "body": [
+      "\"$1\": {",
+      "\t\"phrases\": [",
+      "\t\t$2",
+      "\t]${3:,",
+      "\t\"entities\": {",
+      "\t\t$4",
+      "\t\\}}",
+      "}"
+    ],
+    "description": "Creates a simple Jovo Language Model Intent"
+  },
+  "jovoEntity": {
+    "prefix": ["je"],
+    "body": ["\"$1\": {", "\t\"type\": ${2:{", "\t\t$3", "\t\\}}", "}"],
+    "description": "Creates a simple Jovo Language Model Entity for a Jovo Intent"
+  },
+  "jovoEntityType": {
+    "prefix": ["jet"],
+    "body": ["\"$1\": {", "\t\"values\": [", "\t\t$2", "\t]", "}"],
+    "description": "Creates a simple Jovo Language Model Entity Type"
+  },
+  "jovoEntityTypeValue": {
+    "prefix": ["jetv"],
+    "body": [
+      "{",
+      "\t\"value\": \"$1\",",
+      "\t\"synonyms\": [",
+      "\t\t$2",
+      "\t]",
+      "}"
+    ],
+    "description": "Creates a simple Jovo Language Model Entity Type Value"
   }
 }
