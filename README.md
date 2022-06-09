@@ -12,6 +12,8 @@ This snippet library is supposed to boost development speed vor Jovo v4 projects
 | `jo→`    | jovo output                           |
 | `joo→`   | jovo output with options              |
 | `jh→`    | jovo handler                          |
+| `jp→`    | jovo plugin                           |
+| `jpc→`   | jovo plugin with config               |
 | `jlm→`   | jovo language model                   |
 | `ji→`    | jovo intent                           |
 | `je→`    | jovo entity                           |

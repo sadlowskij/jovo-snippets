@@ -1,4 +1,56 @@
 {
+  "jovoPluginWithConfig": {
+    "prefix": ["jpc", "jovoPluginWithConfig"],
+    "body": [
+      "import {Jovo, HandleRequest, Plugin, PluginConfig, Extensible, InvalidParentError} from '@jovotech/framework';",
+      "",
+      "export interface ${1:${TM_FILENAME_BASE}}Config extends PluginConfig {",
+      "\t$2",
+      "}",
+      "",
+      "export class ${1:${TM_FILENAME_BASE}} extends Plugin<${1:${TM_FILENAME_BASE}}Config> {",
+      "\tmount(extensible: Extensible): void {",
+      "\t\tif (!(extensible instanceof HandleRequest)) {",
+      "\t\t\tthrow new InvalidParentError(this.constructor.name, HandleRequest);",
+      "\t\t}",
+      "\t\textensible.middlewareCollection.use('${4:request.start}', (jovo) => this.${5:someMethod}(jovo));",
+      "\t}",
+      "",
+      "\t${5:someMethod}(jovo: Jovo): void {",
+      "\t\t$0",
+      "\t}",
+      "",
+      "\tgetDefaultConfig(): ${1:${TM_FILENAME_BASE}}Config {",
+      "\t\treturn {$3};",
+      "\t}",
+      "}"
+    ],
+    "description": "Creates a simple jovo Plugin including plugin config"
+  },
+  "jovoPlugin": {
+    "prefix": ["jp", "jovoPlugin"],
+    "body": [
+      "import {Jovo, HandleRequest, Plugin, PluginConfig, Extensible, InvalidParentError} from '@jovotech/framework';",
+      "",
+      "export class ${1:${TM_FILENAME_BASE}} extends Plugin {",
+      "\tmount(extensible: Extensible): void {",
+      "\t\tif (!(extensible instanceof HandleRequest)) {",
+      "\t\t\tthrow new InvalidParentError(this.constructor.name, HandleRequest);",
+      "\t\t}",
+      "\t\textensible.middlewareCollection.use('${2:request.start}', (jovo) => this.${3:someMethod}(jovo));",
+      "\t}",
+      "",
+      "\t${3:someMethod}(jovo: Jovo): void {",
+      "\t\t$0",
+      "\t}",
+      "",
+      "\tgetDefaultConfig(): PluginConfig {",
+      "\t\treturn {};",
+      "\t}",
+      "}"
+    ],
+    "description": "Creates a simple jovo Plugin"
+  },
   "jovoComponent": {
     "prefix": ["jc", "jovoComponent"],
     "body": [
