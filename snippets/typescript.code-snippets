@@ -1,6 +1,6 @@
 {
   "jovoComponent": {
-    "prefix": ["jc"],
+    "prefix": ["jc", "jovoComponent"],
     "body": [
       "import { Component, BaseComponent } from '@jovotech/framework';",
       "",
@@ -15,7 +15,7 @@
     "description": "Creates a simple Jovo Component"
   },
   "jovoOutput": {
-    "prefix": ["jo"],
+    "prefix": ["jo", "jovoOutput"],
     "body": [
       "import { Output, BaseOutput, OutputTemplate } from '@jovotech/framework';",
       "",
@@ -29,7 +29,7 @@
     "description": "Creates a simple Jovo Output Class"
   },
   "jovoHandler": {
-    "prefix": ["jh"],
+    "prefix": ["jh", "jovoHandler"],
     "body": ["@Handle({$2})", "$1(): Promise<void> {", "\t$3", "}", "$0"],
     "description": "Creates a simple Jovo Handler"
   },
