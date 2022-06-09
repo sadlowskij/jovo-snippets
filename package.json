@@ -2,8 +2,9 @@
     "name": "jovo-snippets",
     "displayName": "Jovo Snippets",
     "description": "Handy snippets for Jovo v4",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "publisher": "jsadlowski",
+    "icon": "images/icon.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/sadlowskij/jovo-snippets.git"
