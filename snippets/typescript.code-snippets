@@ -6,13 +6,74 @@
       "",
       "@Component({$2})",
       "export class ${1:${TM_FILENAME_BASE}} extends BaseComponent {",
-      "\tSTART() {",
+      "\tSTART(): Promise<void> {",
       "\t\t$0",
       "\t}",
       "}",
       ""
     ],
     "description": "Creates a simple Jovo Component"
+  },
+  "jovoComponentWithData": {
+    "prefix": ["jcd", "jovoComponentWithData"],
+    "body": [
+      "import { Component, BaseComponent } from '@jovotech/framework';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE}}Data {",
+      "\t$3",
+      "}",
+      "",
+      "@Component({$2})",
+      "export class ${1:${TM_FILENAME_BASE}} extends BaseComponent<${1:${TM_FILENAME_BASE}}Data> {",
+      "\tSTART(): Promise<void> {",
+      "\t\t$0",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "Creates a simple Jovo Component with ComponentData"
+  },
+  "jovoComponentWithConfig": {
+    "prefix": ["jcc", "jovoComponentWithConfig"],
+    "body": [
+      "import { Component, BaseComponent, UnknownObject, ComponentData } from '@jovotech/framework';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE}}Config extends UnknownObject {",
+      "\t$3",
+      "}",
+      "",
+      "@Component({$2})",
+      "export class ${1:${TM_FILENAME_BASE}} extends BaseComponent<ComponentData, ${1:${TM_FILENAME_BASE}}Config> {",
+      "\tSTART(): Promise<void> {",
+      "\t\t$0",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "Creates a simple Jovo Component with ComponentConfig"
+  },
+  "jovoComponentWithConfigAndData": {
+    "prefix": ["jccd", "jovoComponentWithConfigAndData", "jcdc", "jovoComponentWithDataAndConfig"],
+    "body": [
+      "import { Component, BaseComponent, UnknownObject } from '@jovotech/framework';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE}}Data {",
+      "\t$3",
+      "}",
+      "",
+      "interface ${1:${TM_FILENAME_BASE}}Config extends UnknownObject {",
+      "\t$4",
+      "}",
+      "",
+      "@Component({$2})",
+      "export class ${1:${TM_FILENAME_BASE}} extends BaseComponent<${1:${TM_FILENAME_BASE}}Data, ${1:${TM_FILENAME_BASE}}Config> {",
+      "\tSTART(): Promise<void> {",
+      "\t\t$0",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "Creates a simple Jovo Component with ComponentConfig and ComponentData"
   },
   "jovoOutput": {
     "prefix": ["jo", "jovoOutput"],
