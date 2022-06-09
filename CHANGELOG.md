@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.6] - 2022-06-09
+
+### Added
+- Jovo Handler return type
+
 ## [0.0.6] - 2022-04-03
 ### Fixed
 - Moved JSON Snippets into own snippets file

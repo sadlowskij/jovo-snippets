@@ -30,7 +30,7 @@
   },
   "jovoHandler": {
     "prefix": ["jh"],
-    "body": ["@Handle({$2})", "$1() {", "\t$0", "}"],
+    "body": ["@Handle({$2})", "$1(): Promise<void> {", "\t$3", "}", "$0"],
     "description": "Creates a simple Jovo Handler"
   },
 }
