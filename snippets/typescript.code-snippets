@@ -21,12 +21,30 @@
       "",
       "@Output()",
       "export class ${1:${TM_FILENAME_BASE}} extends BaseOutput {",
-      "\tbuild(): OutputTemplate | OutputTemplate[] {",
-      "\t\t$2",
+      "\tasync build(): ${2|Promise<OutputTemplate[]>,Promise<OutputTemplate>|} {",
+      "\t\t$0",
       "\t}",
       "}"
     ],
     "description": "Creates a simple Jovo Output Class"
+  },
+  "jovoOutputWithOptions": {
+    "prefix": ["joo", "jovoOutputWithOptions"],
+    "body": [
+      "import { Output, BaseOutput, OutputTemplate, OutputOptions } from '@jovotech/framework';",
+      "",
+      "interface ${1:${TM_FILENAME_BASE}}Options extends OutputOptions {",
+      "\t$2",
+      "}",
+      "",
+      "@Output()",
+      "export class ${1:${TM_FILENAME_BASE}} extends BaseOutput<${1:${TM_FILENAME_BASE}}Options> {",
+      "\tasync build(): ${3|Promise<OutputTemplate[]>,Promise<OutputTemplate>|} {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "Creates a simple Jovo Output Class with Options"
   },
   "jovoHandler": {
     "prefix": ["jh", "jovoHandler"],
