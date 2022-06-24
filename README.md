@@ -1,6 +1,6 @@
 # Jovo V4 Snippets
 
-This snippet library is supposed to boost development speed vor Jovo v4 projects
+This [snippet library](https://marketplace.visualstudio.com/items?itemName=jsadlowski.jovo-snippets) is supposed to boost development speed vor Jovo v4 projects in visual studio code!
 
 ## Snippets
 |  Trigger | Content                               |
