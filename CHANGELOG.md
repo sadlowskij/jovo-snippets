@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.15] - 2022-07-06
+
+### Added
+- javascript language model scripts
+
 ## [0.0.14] - 2022-06-24
 
 ### Added

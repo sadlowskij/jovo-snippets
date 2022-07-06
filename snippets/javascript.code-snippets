@@ -1,0 +1,55 @@
+{
+  "jovoLanguageModel": {
+    "prefix": ["jlm", "jovoLanguageModel"],
+    "body": [
+      "/** @type {import('@jovotech/model').JovoModelData} */",
+      "module.exports = {",
+      "\tversion: '4.0',",
+      "\tinvocation: '$1',",
+      "\tintents: {",
+      "\t\t$2",
+      "\t},",
+      "\tentityTypes: {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "Creates simple Jovo Language Model"
+  },
+  "jovoIntent": {
+    "prefix": ["ji", "jovoIntent"],
+    "body": [
+      "$1: {",
+      "\tphrases: [",
+      "\t\t$2",
+      "\t]${3:,",
+      "\tentities: {",
+      "\t\t$4",
+      "\t\\},}",
+      "},"
+    ],
+    "description": "Creates a simple Jovo Language Model Intent"
+  },
+  "jovoEntity": {
+    "prefix": ["je", "jovoEntity"],
+    "body": ["$1: {", "\ttype: ${2:{", "\t\t$3", "\t\\},}", "},"],
+    "description": "Creates a simple Jovo Language Model Entity for a Jovo Intent"
+  },
+  "jovoEntityType": {
+    "prefix": ["jet", "jovoEntityType"],
+    "body": ["$1: {", "\tvalues: [", "\t\t$2", "\t],", "},"],
+    "description": "Creates a simple Jovo Language Model Entity Type"
+  },
+  "jovoEntityTypeValue": {
+    "prefix": ["jetv", "jovoEntityTypeValue"],
+    "body": [
+      "{",
+      "\tvalue: '$1',",
+      "\tsynonyms: [",
+      "\t\t$2",
+      "\t],",
+      "},",
+    ],
+    "description": "Creates a simple Jovo Language Model Entity Type Value"
+  }
+}
