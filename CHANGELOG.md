@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.16] - 2022-08-02
+
+### Added
+- i18next snippets for document and translation
+- delegation and redirection snippets
+
 ## [0.0.15] - 2022-07-06
 
 ### Added

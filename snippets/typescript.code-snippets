@@ -164,4 +164,32 @@
     "body": ["@Handle({$2})", "$1(): Promise<void> {", "\t$3", "}", "$0"],
     "description": "Creates a simple Jovo Handler"
   },
+  "jovoDelegate": {
+    "prefix": ["jovoDelegate", "jd"],
+    "body": ["return this.\\$delegate(${1:Component}, { resolve:{${3}}, config: {${4}} });", "$0"],
+    "description": "Creates a simple Jovo Delegate"
+  },
+  "jovoRedirect": {
+    "prefix": ["jovoRedirect", "jr"],
+    "body": ["return this.\\$redirect(${1:Component}${2:, '${3}'});", "$0"],
+    "description": "Creates a simple Jovo Redirect"
+  },
+  "i18nextTranslation": {
+    "prefix": ["i18nextTranslation", "it"],
+    "body": [
+      "${1:KEY}: [${2/([^|]+)([|\\s]*|)/'$1', /g}],",
+      "${0:// Just type all your variations without quotes and separate them with a pipe character \"|\"}"
+    ],
+    "description": "Creates a translation with an array of values"
+  },
+  "i18nextDocument": {
+    "prefix": ["i18nextDocument", "id"],
+    "body": [
+      "export default {",
+      "\ttranslation: {",
+      "\t\t$1",
+      "\t}",
+      "}"
+    ]
+  }
 }
