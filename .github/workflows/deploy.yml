@@ -11,5 +11,4 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: npm i -g vsce
-      - run: vsce publish -p ${{ secrets.VSCE_TOKEN }}
+      - run: npx vsce publish -p ${{ secrets.VSCE_TOKEN }}
