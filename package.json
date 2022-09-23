@@ -30,5 +30,8 @@
                 "path": "./snippets/javascript.code-snippets"
             }
         ]
+    },
+    "devDependencies": {
+        "patch-package": "^6.4.7"
     }
 }
