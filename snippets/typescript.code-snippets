@@ -55,6 +55,7 @@
     "prefix": ["jc", "jovoComponent"],
     "body": [
       "import { Component, BaseComponent, Jovo, ComponentOptions, UnknownObject } from '@jovotech/framework';",
+      "",
       "@Component({$2})",
       "export class ${1:${TM_FILENAME_BASE}} extends BaseComponent {",
       "",
