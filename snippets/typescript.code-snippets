@@ -54,10 +54,14 @@
   "jovoComponent": {
     "prefix": ["jc", "jovoComponent"],
     "body": [
-      "import { Component, BaseComponent } from '@jovotech/framework';",
-      "",
+      "import { Component, BaseComponent, Jovo, ComponentOptions, UnknownObject } from '@jovotech/framework';",
       "@Component({$2})",
       "export class ${1:${TM_FILENAME_BASE}} extends BaseComponent {",
+      "",
+      "\tconstructor(jovo: Jovo, options: ComponentOptions<UnknownObject> | undefined$3) {",
+      "\t\tsuper(jovo, options);$4",
+      "\t}",
+      "",
       "\tSTART(): Promise<void> {",
       "\t\t$0",
       "\t}",
@@ -69,7 +73,7 @@
   "jovoComponentWithData": {
     "prefix": ["jcd", "jovoComponentWithData"],
     "body": [
-      "import { Component, BaseComponent } from '@jovotech/framework';",
+      "import { Component, BaseComponent, Jovo, ComponentOptions, UnknownObject } from '@jovotech/framework';",
       "",
       "interface ${1:${TM_FILENAME_BASE}}Data {",
       "\t$3",
@@ -77,6 +81,11 @@
       "",
       "@Component({$2})",
       "export class ${1:${TM_FILENAME_BASE}} extends BaseComponent<${1:${TM_FILENAME_BASE}}Data> {",
+      "",
+      "\tconstructor(jovo: Jovo, options: ComponentOptions<UnknownObject> | undefined$4) {",
+      "\t\tsuper(jovo, options);$5",
+      "\t}",
+      "",
       "\tSTART(): Promise<void> {",
       "\t\t$0",
       "\t}",
@@ -88,7 +97,7 @@
   "jovoComponentWithConfig": {
     "prefix": ["jcc", "jovoComponentWithConfig"],
     "body": [
-      "import { Component, BaseComponent, UnknownObject, ComponentData } from '@jovotech/framework';",
+      "import { Component, BaseComponent, UnknownObject, ComponentData, ComponentOptions, Jovo } from '@jovotech/framework';",
       "",
       "interface ${1:${TM_FILENAME_BASE}}Config extends UnknownObject {",
       "\t$3",
@@ -96,6 +105,11 @@
       "",
       "@Component({$2})",
       "export class ${1:${TM_FILENAME_BASE}} extends BaseComponent<ComponentData, ${1:${TM_FILENAME_BASE}}Config> {",
+      "",
+      "\tconstructor(jovo: Jovo, options: ComponentOptions<${1:${TM_FILENAME_BASE}}Config> | undefined$4) {",
+      "\t\tsuper(jovo, options);$5",
+      "\t}",
+      "",
       "\tSTART(): Promise<void> {",
       "\t\t$0",
       "\t}",
@@ -107,7 +121,7 @@
   "jovoComponentWithConfigAndData": {
     "prefix": ["jccd", "jovoComponentWithConfigAndData", "jcdc", "jovoComponentWithDataAndConfig"],
     "body": [
-      "import { Component, BaseComponent, UnknownObject } from '@jovotech/framework';",
+      "import { Component, BaseComponent, UnknownObject, ComponentOptions, Jovo } from '@jovotech/framework';",
       "",
       "interface ${1:${TM_FILENAME_BASE}}Data {",
       "\t$3",
@@ -119,6 +133,11 @@
       "",
       "@Component({$2})",
       "export class ${1:${TM_FILENAME_BASE}} extends BaseComponent<${1:${TM_FILENAME_BASE}}Data, ${1:${TM_FILENAME_BASE}}Config> {",
+      "",
+      "\tconstructor(jovo: Jovo, options: ComponentOptions<${1:${TM_FILENAME_BASE}}Config> | undefined$5) {",
+      "\t\tsuper(jovo, options);$6",
+      "\t}",
+      "",
       "\tSTART(): Promise<void> {",
       "\t\t$0",
       "\t}",
@@ -130,11 +149,16 @@
   "jovoOutput": {
     "prefix": ["jo", "jovoOutput"],
     "body": [
-      "import { Output, BaseOutput, OutputTemplate } from '@jovotech/framework';",
+      "import { Output, BaseOutput, OutputTemplate, Jovo, OutputOptions } from '@jovotech/framework';",
+      "import { DeepPartial } from '@jovotech/common';",
       "",
       "@Output()",
       "export class ${1:${TM_FILENAME_BASE}} extends BaseOutput {",
-      "\tasync build(): ${2|Promise<OutputTemplate[]>,Promise<OutputTemplate>|} {",
+      "\tconstructor(jovo: Jovo, options: DeepPartial<OutputOptions> | undefined$3) {",
+      "\t\tsuper(jovo, options);$4",
+      "\t}",
+      "",
+      "\tasync build(): ${5|Promise<OutputTemplate[]>,Promise<OutputTemplate>|} {",
       "\t\t$0",
       "\t}",
       "}"
@@ -144,7 +168,8 @@
   "jovoOutputWithOptions": {
     "prefix": ["joo", "jovoOutputWithOptions"],
     "body": [
-      "import { Output, BaseOutput, OutputTemplate, OutputOptions } from '@jovotech/framework';",
+      "import { Output, BaseOutput, OutputTemplate, OutputOptions, Jovo } from '@jovotech/framework';",
+      "import { DeepPartial } from '@jovotech/common';",
       "",
       "interface ${1:${TM_FILENAME_BASE}}Options extends OutputOptions {",
       "\t$2",
@@ -152,7 +177,11 @@
       "",
       "@Output()",
       "export class ${1:${TM_FILENAME_BASE}} extends BaseOutput<${1:${TM_FILENAME_BASE}}Options> {",
-      "\tasync build(): ${3|Promise<OutputTemplate[]>,Promise<OutputTemplate>|} {",
+      "\tconstructor(jovo: Jovo, options: DeepPartial<${1:${TM_FILENAME_BASE}}Options> | undefined$4) {",
+      "\t\tsuper(jovo, options);$5",
+      "\t}",
+      "",
+      "\tasync build(): ${6|Promise<OutputTemplate[]>,Promise<OutputTemplate>|} {",
       "\t\t$0",
       "\t}",
       "}"
