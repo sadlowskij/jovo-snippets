@@ -34,3 +34,9 @@ This [snippet library](https://marketplace.visualstudio.com/items?itemName=jsadl
 | -------: | --------------------------------------|
 | `id→`    | i18Next Document                      |
 | `it→`    | i18Next Translation                   |
+
+
+## Usage
+This shows how you can quickly create new jovo component with `jcc→` and resolve with `jrs→`
+
+![create jovo component](resources/jcc.gif)
