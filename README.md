@@ -18,6 +18,7 @@ This [snippet library](https://marketplace.visualstudio.com/items?itemName=jsadl
 | `jr→`    | jovo redirect                         |
 | `jd→`    | jovo delegate                         |
 | `jrs→`   | jovo resolve                          |
+| `jhk→`   | jovo hook                             |
 
 ### Jovo Language Model
 |  Trigger | Content                               |

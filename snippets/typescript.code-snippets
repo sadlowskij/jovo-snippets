@@ -209,6 +209,17 @@
     "body": ["return this.\\$resolve($0);"],
     "description": "Creates a simple Jovo Resolve"
   },
+  "jovoHook": {
+    "prefix": ["jovoHook", "jhk"],
+    "body": [
+      "import { Jovo } from '@jovotech/framework';",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}} = (jovo: Jovo): void => {",
+      "\t$0",
+      "};"
+    ],
+    "description": "Creates and exports Jovo Hook function"
+  },
   "i18nextTranslation": {
     "prefix": ["i18nextTranslation", "it"],
     "body": [
