@@ -204,6 +204,11 @@
     "body": ["return this.\\$redirect(${1:Component}${2:, '${3}'});", "$0"],
     "description": "Creates a simple Jovo Redirect"
   },
+  "jovoResolve": {
+    "prefix": ["jovoResolve", "jrs"],
+    "body": ["return this.\\$resolve($0);"],
+    "description": "Creates a simple Jovo Resolve"
+  },
   "i18nextTranslation": {
     "prefix": ["i18nextTranslation", "it"],
     "body": [
